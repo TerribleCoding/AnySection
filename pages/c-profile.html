@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>C - U Profile</title>
+    <script src="../lib/p5.js"></script>
+    <script src="common.js"></script>
+    <script src="c-profile.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!--  <link rel="icon" href="/assets/ico/favicon01.png">  -->
+</head>
+
+<body>
+    <div>
+        <h1>C - U Profile</h1>
+        <a href="../index.html">
+            <img src="../assets/ico/back.svg" class="back">
+            <h3 class="back">Back to index</h3>
+        </a>
+    </div>
+
+    <div class="left">
+        <div class="upper">
+            <table>
+                <caption>Dimensional data</caption>
+                <tr>
+                    <td class="index">B</td>
+                    <td class="value" id="B">
+                    </td>
+                    <td class="unit">mm</td>
+                </tr>
+                <tr>
+                    <td class="index">H</td>
+                    <td class="value" id="H">
+                    </td>
+                    <td class="unit">mm</td>
+                </tr>
+                <tr>
+                    <td class="index">b</td>
+                    <td class="value" id="b">
+                    </td>
+                    <td class="unit">mm</td>
+                </tr>
+                <tr>
+                    <td class="index">h</td>
+                    <td class="value" id="h">
+                    </td>
+                    <td class="unit">mm</td>
+                </tr>
+                <tr>
+                    <td class="index">L</td>
+                    <td class="value" id="L">
+                    </td>
+                    <td class="unit">mm</td>
+                </tr>
+            </table>
+
+            <table>
+                <caption>Material data</caption>
+                <tr>
+                    <td class="index">Material</td>
+                    <td class="value" id="combo">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="index">Density</td>
+                    <td class="value" id="density">
+                    </td>
+                    <td class="unit">kg/m<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td class="index">Ultimate str.</td>
+                    <td class="value" id="brake">
+                    </td>
+                    <td class="unit">N/mm<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td class="index">Yeld str.</td>
+                    <td class="value" id="yeld">
+                    </td>
+                    <td class="unit">N/mm<sup>2</sup></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="results">
+            <table>
+                <caption>Geometrical Results</caption>
+                <tr>
+                    <td class="index results">Perimeter</td>
+                    <td class="value results" id="perimeter"></td>
+                    <td class="unit">mm</td>
+                </tr>
+                <tr>
+                    <td class="index results">Base Area</td>
+                    <td class="value results" id="area"></td>
+                    <td class="unit">mm<sup>2</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">Volume</td>
+                    <td class="value results" id="volume"></td>
+                    <td class="unit">cm<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">Surface</td>
+                    <td class="value results" id="surface"></td>
+                    <td class="unit">cm<sup>2</sup></td>
+                </tr>
+            </table>
+
+            <table>
+                <caption>Physical Results</caption>
+                <tr>
+                    <td class="index results">Mass</td>
+                    <td class="value results" id="mass"></td>
+                    <td class="unit">kg</td>
+                </tr>
+                <tr>
+                    <td class="index results">I<sub>A</sub></td>
+                    <td class="value results" id="inertia"></td>
+                    <td class="unit">mm<sup>4</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">W<sub>A</sub></td>
+                    <td class="value results" id="resistance"></td>
+                    <td class="unit">mm<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">I<sub>B</sub></td>
+                    <td class="value results" id="inertiaB"></td>
+                    <td class="unit">mm<sup>4</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">W<sub>B</sub></td>
+                    <td class="value results" id="resistanceB"></td>
+                    <td class="unit">mm<sup>3</sup></td>
+                </tr>
+                <tr>
+                    <td class="index results">F<sub>max</sub></td>
+                    <td class="value results" id="traction"></td>
+                    <td class="unit">N</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="right" id="image"></div>
+</body>
+
+</html>

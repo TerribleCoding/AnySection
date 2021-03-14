@@ -1,0 +1,202 @@
+:root {
+    --main-bg: #1e1e1e;
+    --color-1: #418ab3;
+    --color-2: #a6a6a6;
+    --color-3: #000000;
+    --color-4: #ffffff;
+    --color-5: #df5327;
+    --side-margin: 16px;
+    --side-bar: 30px;
+}
+
+body {
+    font-family: Rockwell;
+    color: var(--color-1);
+    margin-left: var(--side-margin);
+    margin-right: var(--side-margin);
+    background-color: var(--main-bg);
+}
+
+h1 {
+    font-style: italic;
+    font-size: 30px;
+    border-style: none none solid none;
+    border-width: 3px;
+    border-color: var(--color-1);
+}
+
+h3 {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--color-2);
+}
+
+h3.back {
+    display: inline-block;
+}
+
+p {
+    font-size: 14px;
+}
+
+.label {
+    text-align: center;
+}
+
+img.thumbnail {
+    border-radius: 16px;
+    box-shadow: -5px 5px 10px 0px var(--color-3);
+    margin-top: 24px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.thumbnail {
+    display: inline-block;
+    margin: 0 48px 0 48px;
+    color: var(--color-1);
+}
+
+.thumbnail {
+    width: 140px;
+}
+
+.container {
+    display: inline-block;
+    padding: 16px;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: calc(100% - 2 * var(--side-margin) - var(--side-bar) - 4 * 16px);
+}
+
+.menu {
+    float: right;
+    margin-top: 24px;
+    padding: 16px;
+    text-align: right;
+    width: var(--side-bar);
+}
+
+img.ico {
+    display: block;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+img.back {
+    height: 13px;
+    transform: rotate(-90deg);
+    margin-left: 5%;
+}
+
+.left {
+    display: inline-block;
+    width: 600px;
+    padding-left: 5%;
+    margin-top: 24px;
+}
+
+.right {
+    float: right;
+    margin-top: 24px;
+    width: calc(100% - 5% - 600px - 2 * var(--side-margin));
+    /* 100% - .left(padding.left) - .left(width) - body(margin-left) - body(margin-right) */
+    text-align: center;
+}
+
+.upper {
+    height: 240px;
+}
+
+.drawing {
+    width: 80%;
+    border-radius: 24px;
+    padding: 8px;
+    background-color: var(--color-1);
+    box-shadow: 5px 5px 10px 0px var(--color-3);
+}
+
+.results {
+    color: var(--color-5);
+}
+
+table {
+    float: left;
+    border-spacing: 0px;
+}
+
+caption {
+    text-align: left;
+    padding-left: 5%;
+}
+
+td {
+    width: 95px;
+    height: 26px;
+    border-spacing: 0px;
+}
+
+td.index {
+    background-color: var(--color-1);
+    border-bottom: solid 2px var(--color-1);
+    text-align: right;
+    color: var(--color-4);
+    width: 90px;
+    padding-right: 5px;
+}
+
+td.index.results {
+    background-color: var(--color-5);
+    border-bottom: solid 2px var(--color-5);
+}
+
+td.value {
+    background-color: var(--color-4);
+    border-bottom: solid 2px var(--color-1);
+    text-align: right;
+    color: var(--color-3);
+}
+
+td.value.results {
+    border-bottom: solid 2px var(--color-5);
+    padding-right: 4px;
+}
+
+td.unit {
+    width: 80px;
+    padding-left: 5px;
+}
+
+input, select {
+    text-align: right;
+    color: var(--color-3);
+    width: 95px;
+    border: none;
+    font-family: Rockwell;
+    font-size: 14px;
+}
+
+h4 {
+    text-align: center;
+    color: var(--color-2);
+}
+
+.math {
+    /*display: inline-block;*/
+    /*margin: var(--side-margin);*/
+    /*background-color: var(--color-4);*/
+    float: left;
+    width: 256px;
+    height: 270px;
+    margin-bottom: 30px;
+    color: var(--color-4);
+}
+
+.list {
+    text-align: left;
+    color: var(--color-4);
+    margin-left: 16px;
+}

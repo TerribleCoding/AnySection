@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <title>Math</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../lib/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <!--  <link rel="icon" href="/assets/ico/favicon01.png">  -->
+</head>
+
+<body>
+    <div>
+        <h1>Math</h1>
+        <a href="../index.html">
+            <img src="../assets/ico/back.svg" class="back">
+            <h3 class="back">Back to index</h3>
+        </a>
+    </div>
+
+    <div>
+        <h2>Symbols legend</h2>
+        <div class="list">
+            <p>D = outer diameter</p>
+            <p>d = inner diameter</p>
+            <p>L = bar length</p>
+            <p>r = circle radius <em>or</em> internal radius</p>
+            <p>t = thickness</p>
+            <p></p>
+        </div>
+    </div>
+
+    <div>
+        <h2>Equations</h2>
+        <div class="math">
+            <h4>General Equations</h4>
+            <p>\[V = A \cdot L\]</p>
+            <p>\[if (L = 0) \Rightarrow S = A\]</p>
+            <p>\[if (L \neq 0) \Rightarrow S = 2A + P \cdot L\]</p>
+            <p>\[m = V \cdot \rho\]</p>
+            <p>\[if (R_{s} \neq 0) \Rightarrow F_{max} = \frac{R_{s}}{3} \cdot A\]</p>
+            <p>\[else \Rightarrow F_{max} = \frac{R_{m}}{4} \cdot A\]</p>
+        </div>
+        <div class="math">
+            <h4>Cylinder</h4>
+            <p>\[P = D \cdot \pi\]</p>
+            <p>\[A = \pi r^{2}\]</p>
+            <p>\[I = \frac{\pi \cdot D^{4}}{64}\]</p>
+            <p>\[W = \frac{\pi \cdot D^{3}}{32}\]</p>
+        </div>
+        <div class="math">
+            <h4>Hollow Cylinder</h4>
+            <p>\[d = D - 2t\]</p>
+            <p>\[P = D \cdot \pi + d \cdot \pi = \pi (D + d)\]</p>
+            <p>\[A = \pi r^{2} - \pi (r - t)^{2} = \pi t (D - t)\]</p>
+            <p>\[I = \frac{\pi \cdot (D^{4} - d^{4})}{64}\]</p>
+            <p>\[W = \frac{\pi \cdot (D^{3} - d^{3})}{32}\]</p>
+        </div>
+        <div class="math">
+            <h4>Rectangle Bar</h4>
+            <p>\[P = 2 (B + H - 4R) + 2 \pi R\]</p>
+            <p>\[A = B (H - 2R) + 2R (H - 2R) + \pi R^{2}\]</p>
+            <p>\[I = \frac{B H^{3}}{12}\]</p>
+            <p>\[W = \frac{B H^{2}}{6}\]</p>
+        </div>
+        <div class="math">
+            <h4>Rectangle Tube</h4>
+            <p>\[r = max \left \{ 0 ; R - t \right \} \]</p>
+            <p>\[P_{inner} = 2 (B + H - 4t - 4r) + 2 \pi r\]</p>
+            <p>\[A_{inner} = (B - 2t)(H - 2t - 2r) +\]</p>
+            <p>\[+ 2r (B - 2t - 2r) - \pi r^{2}\]</p>
+            <p>\[I \approx \frac{B H^{3} - (B - 2t)(H - 2t)^{3}}{12}\]</p>
+            <p>\[W \approx \frac{B H^{3} - (B - 2t)(H - 2t)^{3}}{6 H}\]</p>
+        </div>
+        <div class="math">
+            <h4>Triangular Prism</h4>
+            <p>\[P = B + 2 \sqrt{\frac{B^2}{4} + H^2}\]</p>
+            <p>\[A = \frac{B H}{2}\]</p>
+            <p>\[I = \frac{B H^3}{36}\]</p>
+            <p>\[W = \frac{B H^2}{24}\]</p>
+        </div>
+        <div class="math">
+            <h4>Trapezius Prism</h4>
+            <p>\[P = B + b + 2 \sqrt{\frac{(B - b)^{2}}{4} + H^2}\]</p>
+            <p>\[A = \frac{H (B + b)}{2}\]</p>
+            <p>\[I = \frac{H^3 (b^3 + 4Bb + B^2)}{36 (B + b)}\]</p>
+            <p>\[W = \frac{H^2 (b^2 + 4Bb + B^2)}{12 (B + 2b)}\]</p>
+        </div>
+        <div class="math">
+            <h4>Hexagonal Prism</h4>
+            <p>\[e = \frac{H}{2 sin\frac{\pi}{3}}\]</p>
+            <p>\[s = 2e\]</p>
+            <p>\[P = 6e\]</p>
+            <p>\[A = \frac{P \cdot H}{4}\]</p>
+            <p>\[I = \frac{5 \sqrt{3}}{16} \cdot e^4\]</p>
+            <p>\[W_{A} = \frac{2 I}{H}\]</p>
+            <p>\[W_{B} = \frac{2 I}{s}\]</p>
+        </div>
+        <div class="math">
+            <h4>Octagonal Prism</h4>
+            <p>\[e = H \sqrt{2} - H = \frac{H}{1 + \sqrt{2}}\]</p>
+            <p>\[P = 8e\]</p>
+            <p>\[A = 2 (\sqrt{2} - 1) \cdot H^2\]</p>
+            <p>\[I = \frac{\sqrt{2} - 1}{6} \cdot H^4\]</p>
+            <p>\[W = \frac{2 I}{H} = \frac{\sqrt{2} - 1}{3} \cdot H^3\]</p>
+        </div>
+        <div class="math">
+            <h4>Elliptic Bar</h4>
+            <!-- <p>\[a = \frac{A}{2} \; , \; b = \frac{B}{2}\]</p> -->
+            <p>\[P \approx 2 \pi \sqrt{\frac{A^2 + B^2}{8}}\]</p>
+            <p>\[A = \pi \frac{A \cdot B}{4}\]</p>
+            <p>\[I = \frac{\pi A B^3}{64}\]</p>
+            <p>\[W = \frac{2 I}{B} = \frac{\pi A B^2}{32}\]</p>
+        </div>
+        <div class="math">
+            <h4>Elliptic Tube</h4>
+            <!-- <p>\[a = \frac{A}{2} \; , \; b = \frac{B}{2}\]</p> -->
+            <p>\[P \approx 2 \pi \left [ \sqrt{\frac{A^2 + B^2}{8}} + \sqrt{\frac{(A - 2t)^2 + (B - 2t)^2}{8}} \right ]\]</p>
+            <p>\[A \simeq \frac{\pi}{4} \left [A B - (A - 2t)(B- 2t) \right ]\]</p>
+            <p>\[I \simeq \frac{\pi}{64} \left [A B^3 - (A - 2t)(B- 2t)^3 \right ]\]</p>
+            <p>\[W = \frac{2 I}{B} \simeq \frac{\pi}{32 \cdot B} \left [A B^3 - (A - 2t)(B- 2t)^3 \right ]\]</p>
+        </div>
+        <div class="math">
+            <h4>H Profile</h4>
+            <p>\[P = 2 (2B + H - t)\]</p>
+            <p>\[A = B (H - h) + ht\]</p>
+            <p>\[I_{A} = \frac{B H^3 - (B-t) h^3}{12}\]</p>
+            <p>\[W_{A} = \frac{2 I_{A}}{H} = \frac{B H^3 - (B-t) h^3}{6H}\]</p>
+            <p>\[I_{B} = \frac{(H - h) B^3 - h t^3}{12}\]</p>
+            <p>\[W_{B} = \frac{2 I_{B}}{B} = \frac{(H - h) B^3 - h t^3}{6B}\]</p>
+        </div>
+        <div class="math">
+            <h4>C Profile</h4>
+            <p>\[P = 2 (B + H + b)\]</p>
+            <p>\[A = B H - b h\]</p>
+            <p>\[I_{A} = \frac{B H^3 - b h^3}{12}\]</p>
+            <p>\[W_{A} = \frac{2 I_{A}}{H} = \frac{B H^3 - b h^3}{6H}\]</p>
+            <p>\[v_1B = \frac{1}{2} \cdot \frac{(H - h) B^2 + h (B - b)^2}{(H - h) B + h (B - b)}\]</p>
+            <p>\[I_{B} = \frac{H {v_1B}^3 - h (v_1B - B + b)^3 + (H - h)(B - v_1B)^3}{3}\]</p>
+            <p>\[W_{B} = \frac{I_{B}}{B - v_1B}\]</p>
+        </div>
+        <div class="math">
+            <h4>T Profile</h4>
+            <p>\[P = 2 (B + H)\]</p>
+            <p>\[A = B (H - h) - h t\]</p>
+            <p>\[v_1A = \frac{1}{2} \cdot \frac{t H^2 + (B - t) (H - h)^2}{t H + (B - t) (H - h)}\]</p>
+            <p>\[I_{A} = \frac{B {v_1A}^3 - (B - t) (v_1A - H + h)^3 + t(H - v_1A)^3}{3}\]</p>
+            <p>\[W_{A} = \frac{I_{A}}{H - v_1A}\]</p>
+            <p>\[I_{B} = \frac{(H - h) B^3 - h t^3}{12}\]</p>
+            <p>\[W_{B} = \frac{2 I_{B}}{B} = \frac{(H - h) B^3 - h t^3}{6B}\]</p>
+        </div>
+    </div>
+</body>
+
+</html>
