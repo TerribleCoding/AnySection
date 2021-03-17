@@ -6,7 +6,7 @@
     --color-4: #ffffff;
     --color-5: #df5327;
     --side-margin: 16px;
-    --side-bar: 30px;
+    --side-bar: 0px; /*30px;*/
 }
 
 body {
@@ -66,7 +66,7 @@ a.thumbnail {
 
 .container {
     display: inline-block;
-    padding: 16px;
+    padding: 16px 48px 16px 48px; /*padding: 16px; for side bar*/
     margin: 0 auto 0 auto;
     text-align: center;
     width: calc(100% - 2 * var(--side-margin) - var(--side-bar) - 4 * 16px);
