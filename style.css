@@ -17,6 +17,26 @@ body {
     background-color: var(--main-bg);
 }
 
+div.copyright {
+    display: block;
+    background: linear-gradient(90deg, #00000000, #00000000, var(--color-1), #00000000, #00000000);
+    height: 18px;
+    padding: 3px;
+    text-align: center;
+}
+
+p.copyright {
+    display: inline;
+    font-family: serif;
+    color: #ffffff;
+}
+
+.logo {
+    height: 100%;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 h1 {
     font-style: italic;
     font-size: 30px;
