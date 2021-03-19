@@ -20,8 +20,9 @@ body {
 div.copyright {
     display: block;
     background: linear-gradient(90deg, #00000000, #00000000, var(--color-1), #00000000, #00000000);
-    height: 18px;
+    height: 12px;
     padding: 3px;
+    padding-bottom: 12px;
     text-align: center;
 }
 
@@ -29,12 +30,12 @@ p.copyright {
     display: inline;
     font-family: serif;
     color: #ffffff;
+    font-size: 75%;
 }
 
 .logo {
     height: 100%;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin: 0 4px 0 4px;
 }
 
 h1 {
