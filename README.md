@@ -1,4 +1,4 @@
-# Profiles-Calculator
+# AnySection
 
 A powerful web tool for calculating phisical and mechanical properties of standard geometry bars.
 
@@ -25,14 +25,23 @@ Results updates trigger whenever **one** of these events occur:
 
 All texts and numbers on the pages are able to be copied and pasted anywhere you need.
 
-A button for getting back to the main page is provided on every profile page, directly below its title
+A button for getting back to the main page is provided on every profile page, directly below its title.
+
+## Known bugs and issues
+
+## Next improvements
 
 ## Versions log
 
 #### v1.0
 
-_Release date: March 20, 2021_
+_Release date: March 27, 2021_
 
-_Work Hours: unknown_
+_Work Hours: unknown, project directory created on Jan 14, 2021_
 
 First release composed by an index page and 13 standard shapes to choose. Tables on every profile page for inserting shape data and material data or choose from presetted materials.
+
+## Team
+
+- Nazzarneo Pasqual [@TerribleCoding](https://github.com/TerribleCoding) (project owner and main developer)
+- Riccardo Pellegrin [@Pelle96](https://github.com/Pelle96) (logo design)
