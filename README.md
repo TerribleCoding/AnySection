@@ -29,6 +29,12 @@ A button for getting back to the main page is provided on every profile page, di
 
 ## Known bugs and issues
 
+#### Ellipse perimeter not precise
+
+The formula used to get the perimeter is not the best available.
+The more "squished" the ellipse, the more imprecise the result.
+Will be fixed in next versions.
+
 ## Next improvements
 
 ## Versions log
@@ -44,4 +50,4 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 ## Team
 
 - Nazzarneo Pasqual [@TerribleCoding](https://github.com/TerribleCoding) (project owner and main developer)
-- Riccardo Pellegrin [@Pelle96](https://github.com/Pelle96) (logo design)
+- Riccardo Pellegrin [@Pelle96](https://github.com/Pelle96) (graphics design)
