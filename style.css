@@ -41,9 +41,16 @@ p.copyright {
 h1 {
     font-style: italic;
     font-size: 30px;
+    height: 32.2px;
     border-style: none none solid none;
     border-width: 3px;
     border-color: var(--color-1);
+}
+
+.tool-logo {
+    height: 50px;
+    position: absolute;
+    transform: translateY(-73.1px); /*-23.1 - height*/
 }
 
 h3 {
