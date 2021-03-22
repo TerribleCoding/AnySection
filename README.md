@@ -35,7 +35,18 @@ The formula used to get the perimeter is not the best available.
 The more "squished" the ellipse, the more imprecise the result.
 Will be fixed in next versions.
 
-## Next improvements
+## Next improvements to be added
+
+- Math page (showing formulas and symbols used in the tool)
+- More materials in the database
+- Materials divided in groups, in order to filter the available ones
+- Result finder (let the program change an input to return a specific result)
+- Data swapper for rectangles and ellipses (you may want to swap width and height rapidly, a button will be added)
+- Limiting inputs to positive values
+- Limiting inputs to generate valid geometry (e.g. a tube D=10, t=6 is not valid)
+- Canvas to see the shape change dynamically while typing and changing data
+- Shape will be downloadable in many file formats, to speed up engineers' work
+- Dinamically change data units to type/see inputs/results in a different scale
 
 ## Versions log
 
@@ -47,7 +58,15 @@ _Work Hours: unknown, project directory created on Jan 14, 2021_
 
 First release composed by an index page and 13 standard shapes to choose. Tables on every profile page for inserting shape data and material data or choose from presetted materials.
 
-## Team
+## Team & Credits
 
+#### Team
 - Nazzarneo Pasqual [@TerribleCoding](https://github.com/TerribleCoding) (project owner and main developer)
 - Riccardo Pellegrin [@Pelle96](https://github.com/Pelle96) (graphics design)
+
+#### Libraries
+> [p5.js](https://p5js.org/) javascript library
+
+#### Media
+- favpng
+- favivon non me la ricordo
