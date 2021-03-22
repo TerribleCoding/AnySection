@@ -37,6 +37,7 @@ Will be fixed in next versions.
 
 ## Next improvements to be added
 
+Note: _The order of this list might not match the order these features will be added through next versions._
 - Math page (showing formulas and symbols used in the tool)
 - More materials in the database
 - Materials divided in groups, in order to filter the available ones
@@ -61,12 +62,12 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 ## Team & Credits
 
 #### Team
-- Nazzarneo Pasqual [@TerribleCoding](https://github.com/TerribleCoding) (project owner and main developer)
+- Nazzareno Pasqual [@TerribleCoding](https://github.com/TerribleCoding) (project owner and main developer)
 - Riccardo Pellegrin [@Pelle96](https://github.com/Pelle96) (graphics design)
 
 #### Libraries
-> [p5.js](https://p5js.org/) javascript library
+- [p5.js](https://p5js.org/) javascript library
+<!-- - [MathJax](https://www.mathjax.org/) javascript library -->
 
 #### Media
-- favpng
-- favivon non me la ricordo
+- Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](www.flaticon.com)
