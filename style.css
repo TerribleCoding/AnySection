@@ -94,7 +94,7 @@ a.thumbnail {
 
 .container {
     display: inline-block;
-    padding: 16px 48px 16px 48px; /*padding: 16px; for side bar*/
+    padding: 0 48px 0 48px; /*16px for side bar*/
     margin: 0 auto 0 auto;
     text-align: center;
     width: calc(100% - 2 * var(--side-margin) - var(--side-bar) - 4 * 16px);
@@ -141,6 +141,7 @@ img.back {
 
 .drawing {
     width: 80%;
+    min-width: 300px;
     border-radius: 24px;
     padding: 8px;
     background-color: var(--color-1);
