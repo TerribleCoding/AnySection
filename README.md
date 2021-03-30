@@ -71,3 +71,7 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 
 #### Media
 - Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](www.flaticon.com)
+
+## License
+
+The project is published intentionally with no license at the moment.
