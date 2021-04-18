@@ -139,6 +139,24 @@ img.back {
     height: 240px;
 }
 
+.switch {
+    background-color: var(--color-4);
+    color: var(--color-1);
+    border: solid 2px var(--color-1);
+    padding: 4px;
+    margin-top: 8px;
+    margin-left: 36px;
+    margin-right: 400px;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.switch:hover {
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+
 .drawing {
     width: 80%;
     min-width: 300px;

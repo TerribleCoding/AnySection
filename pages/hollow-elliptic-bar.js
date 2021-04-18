@@ -30,3 +30,11 @@ function Resistance() {
 }
 
 function ResistanceB() { }
+
+function switchDim() {
+    let A = floatElseZero(dim.A.elt.value);
+    let B = floatElseZero(dim.B.elt.value);
+    dim.A.elt.value = B;
+    dim.B.elt.value = A;
+    updateResults();
+}
