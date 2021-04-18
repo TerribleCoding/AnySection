@@ -45,3 +45,11 @@ function Resistance() {
 }
 
 function ResistanceB() { }
+
+function switchDim() {
+    let b = floatElseZero(dim.B.elt.value);
+    let h = floatElseZero(dim.H.elt.value);
+    dim.B.elt.value = h;
+    dim.H.elt.value = b;
+    updateResults();
+}
