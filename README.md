@@ -4,6 +4,10 @@ A powerful web tool for calculating phisical and mechanical properties of standa
 
 Can be used by designers and engineers as a quick estimation tool, as well as by students as a geometry tool, or simply to find material data from the database.
 
+## License
+
+The project is published intentionally with no license at the moment.
+
 ## Usage
 
 Choose the shape you want to calculate features by clicking the corresponding image or name.
@@ -13,7 +17,7 @@ Wether results will be available while inserting data, they will show in the bot
 e.g.: If you're looking for the area of a rectangle as the base **and** the height will be filled in you'll have the result otherwise the field will be null.
 
 You can use the arrows on the right side of any input field to raise or decrease it by 1 unit, for your convenience.
-For a quicker input process, is suggested to use the _Tab_ key to junp on the next input field.
+For a quicker input process, is suggested to use the _Tab_ key to jump on the next input field.
 
 Results updates trigger whenever **one** of these events occur:
 
@@ -22,6 +26,7 @@ Results updates trigger whenever **one** of these events occur:
 - Changing field with _Tab_ key
 - Changing material selecting it from the provided list
 - Clicking anywhere on the page, after editing of a number, deselecting the input field
+- Clicking on dimension swap button
 
 All texts and numbers on the pages are able to be copied and pasted anywhere you need.
 
@@ -42,7 +47,6 @@ Note: _The order of this list might not match the order these features will be a
 - More materials in the database
 - Materials divided in groups, in order to filter the available ones
 - Result finder (let the program change an input to return a specific result)
-- Data swapper for rectangles and ellipses (you may want to swap width and height rapidly, a button will be added)
 - Limiting inputs to positive values
 - Limiting inputs to generate valid geometry (e.g. a tube D=10, t=6 is not valid)
 - Canvas to see the shape change dynamically while typing and changing data
@@ -55,9 +59,18 @@ Note: _The order of this list might not match the order these features will be a
 
 _Release date: March 27, 2021_
 
-_Work Hours: unknown, project directory created on Jan 14, 2021_
+_Work Time: unknown, project directory created on Jan 14, 2021_
 
 First release composed by an index page and 13 standard shapes to choose. Tables on every profile page for inserting shape data and material data or choose from presetted materials.
+
+#### v1.1
+
+_Release date: April 18, 2021_
+
+_Work Time: 1h_
+
+- Fixed issue #1 - Favicon not working.
+- Added a dimension swapper button for rectangles and ellipses. Click it to swap width and height rapidly.
 
 ## Team & Credits
 
@@ -71,7 +84,3 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 
 #### Media
 - Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](www.flaticon.com)
-
-## License
-
-The project is published intentionally with no license at the moment.
