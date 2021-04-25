@@ -27,6 +27,7 @@ function preload() {
         if (par != null) {
             let inp = createInput();
             inp.attribute('type', 'number');
+            inp.attribute('min', '0');
             inp.parent(par);
             inp.changed(updateResults);
             dim[e] = inp;
@@ -37,6 +38,7 @@ function preload() {
         if (par != null) {
             let inp = createInput();
             inp.attribute('type', 'number');
+            inp.attribute('min', '0');
             inp.parent(par);
             inp.changed(updateResults);
             mat[e] = inp;
@@ -55,11 +57,6 @@ function preload() {
         Wb: document.getElementById('resistanceB'),
         F: document.getElementById('traction')
     }
-    // for (let p in res) {
-    //     if (res[p] == null) {
-    //         delete res[p];
-    //     }
-    // }
 }
 
 function setup() {
