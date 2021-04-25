@@ -1,6 +1,6 @@
-# AnySection
+<img src="assets/ico/tool-logo.png" height="52pt">
 
-A powerful web tool for calculating phisical and mechanical properties of standard geometry bars.
+AnySection is a powerful web tool for calculating phisical and mechanical properties of standard geometry bars.
 
 Can be used by designers and engineers as a quick estimation tool, as well as by students as a geometry tool, or simply to find material data from the database.
 
@@ -34,11 +34,12 @@ A button for getting back to the main page is provided on every profile page, di
 
 ## Known bugs and issues
 
-#### Ellipse perimeter not precise
+#### Ellipse perimeter not exact
 
-The formula used to get the perimeter is not the best available.
-The more "squished" the ellipse, the more imprecise the result.
-Will be fixed in next versions.
+The formula used to get the perimeter is not an exact calculation, however is roughly the best approximation available.
+Notice that the more "squished" the ellipse, the more imprecise the result.
+The formula has been updated to a better one - this one - in version 1.2 and the approximation is totally suitable for the intended use of this tool.
+This might mean that it won't be upgraded to an even more precise calculation (infinite series are not infinite in programming).
 
 ## Next improvements to be added
 
@@ -47,7 +48,6 @@ Note: _The order of this list might not match the order these features will be a
 - More materials in the database
 - Materials divided in groups, in order to filter the available ones
 - Result finder (let the program change an input to return a specific result)
-- Limiting inputs to positive values
 - Limiting inputs to generate valid geometry (e.g. a tube D=10, t=6 is not valid)
 - Canvas to see the shape change dynamically while typing and changing data
 - Shape will be downloadable in many file formats, to speed up engineers' work
@@ -71,6 +71,15 @@ _Work Time: 1h_
 
 - Fixed issue #1 - Favicon not working.
 - Added a dimension swapper button for rectangles and ellipses. Click it to swap width and height rapidly.
+
+#### v1.2
+
+_Release date: April 25, 2021_
+
+_Work Time: 45min_
+
+- Limited numerical inputs to positive values
+- Improved precision for ellipses' perimeter
 
 ## Team & Credits
 

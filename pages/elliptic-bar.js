@@ -1,7 +1,11 @@
 function Perimeter() {
     let A = floatElseZero(dim.A.elt.value);
     let B = floatElseZero(dim.B.elt.value);
-    return 2 * PI * sqrt((A * A + B * B) / 8);
+    let a = A / 2;
+    let b = B / 2;
+    let h = pow(a - b, 2) / pow(a + b, 2);
+    let factor = 1 + 3 * h / (10 + sqrt(4 - 3 * h));
+    return PI * (a + b) * factor;
 }
 
 function Area() {
