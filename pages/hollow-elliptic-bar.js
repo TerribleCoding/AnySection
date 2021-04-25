@@ -2,9 +2,13 @@ function Perimeter() {
     let A = floatElseZero(dim.A.elt.value);
     let B = floatElseZero(dim.B.elt.value);
     let t = floatElseZero(dim.t.elt.value);
-    let outerSqrt = sqrt((pow(A, 2) + pow(B, 2)) / 8);
-    let innerSqrt = sqrt((pow(A - 2 * t, 2) + pow(B - 2 * t, 2)) / 8);
-    return 2 * PI * (outerSqrt + innerSqrt);
+    let a = A / 2;
+    let b = B / 2;
+    let hOut = pow(a - b, 2) / pow(a + b, 2);
+    let outer = PI * (a + b) * (1 + 3 * hOut / (10 + sqrt(4 - 3 * hOut)));
+    let hInn = pow(a - b, 2) / pow(a + b - 2 * t, 2);
+    let inner = PI * (a + b - 2 * t) * (1 + 3 * hInn / (10 + sqrt(4 - 3 * hInn)));
+    return outer + inner;
 }
 
 function Area() {
