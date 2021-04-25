@@ -1,6 +1,6 @@
-# AnySection
+<img src="assets/ico/tool-logo.png" height="52pt">
 
-A powerful web tool for calculating phisical and mechanical properties of standard geometry bars.
+AnySection is a powerful web tool for calculating phisical and mechanical properties of standard geometry bars.
 
 Can be used by designers and engineers as a quick estimation tool, as well as by students as a geometry tool, or simply to find material data from the database.
 
