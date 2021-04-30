@@ -55,13 +55,14 @@ Note: _The order of this list might not match the order these features will be a
 
 ## Versions log
 
-#### v1.0
+#### v1.2
 
-_Release date: March 27, 2021_
+_Release date: April 25, 2021_
 
-_Work Time: unknown, project directory created on Jan 14, 2021_
+_Work Time: 45min_
 
-First release composed by an index page and 13 standard shapes to choose. Tables on every profile page for inserting shape data and material data or choose from presetted materials.
+- Limited numerical inputs to positive values
+- Improved precision for ellipses' perimeter
 
 #### v1.1
 
@@ -72,14 +73,13 @@ _Work Time: 1h_
 - Fixed issue #1 - Favicon not working.
 - Added a dimension swapper button for rectangles and ellipses. Click it to swap width and height rapidly.
 
-#### v1.2
+#### v1.0
 
-_Release date: April 25, 2021_
+_Release date: March 27, 2021_
 
-_Work Time: 45min_
+_Work Time: unknown, project directory created on Jan 14, 2021_
 
-- Limited numerical inputs to positive values
-- Improved precision for ellipses' perimeter
+First release composed by an index page and 13 standard shapes to choose. Tables on every profile page for inserting shape data and material data or choose from presetted materials.
 
 ## Team & Credits
 
