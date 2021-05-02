@@ -55,6 +55,12 @@ Note: _The order of this list might not match the order these features will be a
 
 ## Versions log
 
+#### v1.3
+
+_Release date: ???????????????????????_
+
+_Work Time: 2h_
+
 #### v1.2
 
 _Release date: April 25, 2021_
