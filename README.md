@@ -98,4 +98,5 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 <!-- - [MathJax](https://www.mathjax.org/) javascript library -->
 
 #### Media
-- Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](www.flaticon.com)
+- Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](https://www.flaticon.com/)
+- Icons made by [Freepik](https://www.freepik.com) [www.flaticon.com](https://www.flaticon.com/)
