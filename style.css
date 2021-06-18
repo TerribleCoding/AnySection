@@ -225,25 +225,3 @@ input, select {
     font-family: Rockwell;
     font-size: 14px;
 }
-
-h4 {
-    text-align: center;
-    color: var(--color-2);
-}
-
-.math {
-    /*display: inline-block;*/
-    /*margin: var(--side-margin);*/
-    /*background-color: var(--color-4);*/
-    float: left;
-    width: 256px;
-    height: 270px;
-    margin-bottom: 30px;
-    color: var(--color-4);
-}
-
-.list {
-    text-align: left;
-    color: var(--color-4);
-    margin-left: 16px;
-}
