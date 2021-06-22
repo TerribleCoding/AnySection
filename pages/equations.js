@@ -63,11 +63,11 @@ function setup() {
             cards[i].append(title, innerContainer);
         }
     }
-}
 
-// load MathJax after all
-let mathjax = document.createElement('script');
-mathjax.id = "MathJax-script";
-mathjax.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-mathjaxsetAttribute('async', '');
-document.head.appendChild(mathjax);
+    // load MathJax after all
+    let mathjax = document.createElement('script');
+    mathjax.id = "MathJax-script";
+    mathjax.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+    mathjax.defer = true;
+    document.head.appendChild(mathjax);
+}
