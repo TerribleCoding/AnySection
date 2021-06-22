@@ -65,6 +65,7 @@ input[name=select] {
     border-radius: 1em;
     width: 100px;
     overflow: hidden;
+    max-height: calc(100vh - 129px - 1em);
 }
 
 .math {
