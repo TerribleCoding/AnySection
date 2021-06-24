@@ -55,6 +55,12 @@ input[name=select]:checked ~ label::after {
     bottom: 50%;
 }
 
+label a {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
 input[name=select] {
     display: none;
 }
@@ -64,7 +70,7 @@ input[name=select] {
     background-color: white;
     border-radius: 1em;
     width: 100px;
-    overflow: hidden;
+    overflow: scroll;
     max-height: calc(100vh - 129px - 1em);
 }
 

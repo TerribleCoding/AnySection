@@ -27,6 +27,10 @@ function setup() {
         let label = document.createElement('label');
         label.setAttribute('for', id);
         label.innerText = profiles.rows[i].obj["Name"];
+        let link = document.createElement('a');
+        link.href = "#" + database[profiles.rows[i].obj["Name"]].title.replace(" ", "");
+        link.setAttribute('onclick', 'checkMe(' + (i + 1) + ')');
+        label.append(link);
         div.append(btn, label, document.createElement('br'));
         list.append(div);
     }
@@ -38,6 +42,7 @@ function setup() {
         document.getElementById('board').append(math);
         let title = document.createElement('h4');
         title.innerHTML = database[elt.obj["Name"]].title;
+        title.id = title.innerHTML.replace(" ", "");
         let main = document.createElement('div');
         math.append(title, main);
         let pic = document.createElement('img');
@@ -70,4 +75,8 @@ function setup() {
     mathjax.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
     mathjax.defer = true;
     document.head.appendChild(mathjax);
+}
+
+function checkMe(index) {
+    document.getElementById('radio' + index).checked = true;
 }
