@@ -104,7 +104,7 @@ input[name=select] {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
-.card > div {
+.card:not(:first-of-type) > div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -124,6 +124,27 @@ h5 {
     color: black;
     width: auto;
     margin: .15em;
+}
+
+.card:first-of-type p {
+    text-align: left;
+}
+
+.card p > span {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.card p > span:nth-child(1) {
+    display: none;
+}
+
+.card p > span:nth-child(2) {
+    width: 6ch;
+}
+
+.card p > span:nth-child(3) {
+    width: max-content;
 }
 
 mjx-container[jax="CHTML"][display="true"] {

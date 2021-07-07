@@ -33,6 +33,7 @@ function setup() {
         label.append(link);
         div.append(btn, label, document.createElement('br'));
         list.append(div);
+        //reverse highlighting labels on scroll////////////////////////////////////////////////////
     }
 
     // content generation
@@ -61,9 +62,21 @@ function setup() {
             let strings = database[elt.obj["Name"]][indices[i]];
             for (let j = 0; j < strings.length; j++) {
                 let p = document.createElement('p');
-                p.innerHTML = strings[j];
-                if (i != 0) p.innerHTML = strings[j].replaceAll("/", "\\");
-                innerContainer.append(p);
+                if (i != 0) {
+                    p.innerHTML = strings[j];
+                    p.innerHTML = strings[j].replaceAll("/", "\\");
+                    innerContainer.append(p);
+                } else {
+                    let re = /(.+)\s?:\s?(.+)/;
+                    let spans = re.exec(strings[j]);
+                    for (let str of spans) {
+                        let s = document.createElement('span');
+                        s.innerHTML = str;
+                        p.append(s);
+                    }
+                    let br = document.createElement('br');
+                    innerContainer.append(p, br);
+                }
             }
             cards[i].append(title, innerContainer);
         }
