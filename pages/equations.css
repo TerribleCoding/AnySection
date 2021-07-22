@@ -32,7 +32,7 @@ label:hover {
 input[name=select]:checked ~ label {
     background-color: var(--color-5);
     color: var(--main-bg);
-    border-radius: 100vh;
+    border-radius: 0.5em;
 }
 
 input[name=select]:checked ~ label::before, input[name=select]:checked ~ label::after {
@@ -70,14 +70,14 @@ input[name=select] {
     background-color: white;
     border-radius: 1em;
     width: 100px;
-    overflow: scroll;
+    overflow: hidden;
     max-height: calc(100vh - 129px - 1em);
 }
 
 .math {
     --marg: 2%;
     width: calc(100% - 2 * var(--marg));
-    height: auto;
+    height: calc(100% - 2 * var(--marg));
     margin: var(--marg);
 }
 
@@ -88,7 +88,7 @@ input[name=select] {
 
 .math > div {
     display: grid;
-    grid-template: auto auto / 1fr 1fr;
+    grid-template: auto 1fr / repeat(3, 1fr);
     gap: .5em;
 }
 
@@ -102,6 +102,7 @@ input[name=select] {
     border-left: solid 1px var(--color-1);
     border-radius: 16px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
 }
 
 .card:not(:first-of-type) > div {
@@ -114,7 +115,7 @@ h5 {
     color: black;
     text-align: center;
     font-size: 1em;
-    margin-block-start: 0.5em;
+    margin-block-start: 0;
     margin-block-end: 1em;
 }
 
@@ -124,6 +125,7 @@ h5 {
     color: black;
     width: auto;
     margin: .15em;
+    font-size: 80%;
 }
 
 .card:first-of-type p {
@@ -145,6 +147,18 @@ h5 {
 
 .card p > span:nth-child(3) {
     width: max-content;
+}
+
+.card:nth-child(2) { /*LEGEND*/
+    grid-row: 2;
+}
+
+.card:nth-child(3) { /*GEO*/
+    grid-row: 1 / span 2;
+}
+
+.card:nth-child(4) { /*PHI*/
+    grid-row: 1 / span 2;
 }
 
 mjx-container[jax="CHTML"][display="true"] {

@@ -33,7 +33,6 @@ function setup() {
         label.append(link);
         div.append(btn, label, document.createElement('br'));
         list.append(div);
-        //reverse highlighting labels on scroll////////////////////////////////////////////////////
     }
 
     // content generation

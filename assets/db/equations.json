@@ -6,7 +6,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -34,7 +34,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -63,7 +63,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -93,7 +93,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -121,7 +121,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -149,7 +149,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -177,7 +177,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -207,7 +207,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -238,7 +238,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -272,7 +272,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -303,7 +303,7 @@
             "L : length",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -335,7 +335,7 @@
             "v<sub>1</sub> : barycenter height",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
@@ -368,7 +368,7 @@
             "v<sub>1</sub> : barycenter height",
             "R<sub>m</sub> : braking/ultimate strength",
             "R<sub>eH</sub> : yeld strength",
-            "I : moment of inertia relative to horixontal axis",
+            "I : moment of inertia on horiz. axis",
             "W : strength modulus on vertical load",
             "F<sub>max</sub> : max traction load"
         ],
