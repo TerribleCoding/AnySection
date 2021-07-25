@@ -1,0 +1,83 @@
+.popup {
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 0%, 0.65);
+    backdrop-filter: blur(8px);
+    /*display: grid;*/
+    place-items: center;
+}
+
+.popup > .outer {
+    width: 40%;
+    background-color: var(--main-bg);
+    border-radius: 0.5em;
+    padding: 1em;
+    display: grid;
+    place-items: center;
+    border: solid 3px var(--color-1);
+}
+
+close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    color: var(--color-1);
+    cursor: pointer;
+}
+
+close:hover {
+    color: var(--color-4);
+}
+
+.popup > .outer > .content {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    position: relative;
+    line-height: 1.5em;
+}
+
+.popup a {
+    color: inherit;
+}
+
+.popup button {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: solid 3px var(--color-4);
+    color: var(--color-4);
+    background-color: transparent;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: var(--color-1);
+    border-color: var(--color-1);
+}
+
+.popup button i {
+    margin-right: 1ch;
+}
+
+.popup button.secondary {
+    border: none;
+}
+
+.popup button.secondary:hover {
+    background-color: transparent;
+    color: var(--color-1);
+}
+
+.popup p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    line-height: 1.2em;
+}

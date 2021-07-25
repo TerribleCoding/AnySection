@@ -5,7 +5,10 @@
     <title>AnySection</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
     <link rel="icon" type="image/x-icon" href="assets/ico/favicon.ico">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -16,34 +19,63 @@
         <img src="assets/ico/tool-logo.png" alt="AnySection" class="tool-logo">
         <h3>Select a profile shape</h3>
     </div>
-    <div class="container" id="container"></div>
-    <!--
-    <div class="menu">
-        <a href="../lang.html"><img src="assets/ico/translate.svg" class="ico"></a>
-        <a href="pages/math.html"><img src="assets/ico/math.svg" class="ico"></a>
-    </div>
-    -->
-    <script src="script.js"></script>
-    <div class="copyright">
-        <p class="copyright">Project developed by</p>
-        <a href=".." target="_blank">
-            <img src="assets/ico/TClogo-inline.svg" class="logo">
-        </a>
-        <p class="copyright">and hosted on</p>
-        <a href="https://github.com/TerribleCoding/AnySection" target="_blank">
-            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" class="logo">
-        </a>
-        <br>
-        <a href="https://github.com/TerribleCoding/AnySection/releases" target="_blank">
-            <p class="copyright">AnySection v1.2</p>
-        </a>
-        <div style="height: 30px;">
-            <a href="https://www.buymeacoffee.com/terriblecoding" target="_blank">
-                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee"
-                    style="height: 40px !important;">
-            </a>
+
+    <div id="main">
+        <div class="container" id="container"></div>
+
+        <div class="menu">
+            <a href="pages/equations.html"><i class="fi-rr-square-root"></i><span>Equations</span></a>
+            <a href="https://github.com/TerribleCoding/AnySection" target="_blank"><i
+                    class="fi-rr-book"></i></i><span>Help</span></a>
+            <a href="#" onclick="openCredits()"><i class="fi-rr-copyright"></i><span>Credits</span></a>
+            <a href="https://www.buymeacoffee.com/terriblecoding" target="_blank"><i
+                    class="fi-rr-dollar"></i><span>Support</span></a>
         </div>
     </div>
+
+    <div id="credits" style="display: none;" class="popup">
+        <div class="outer">
+            <div class="content">
+                <close onclick="closeCredits()"><i class="fi-rr-cross"></i></close>
+                <img src="assets/ico/tool-logo.png" alt="AnySection" height="50">
+                <a href="https://github.com/TerribleCoding/AnySection/releases" target="_blank"
+                    style="position: relative; left: 0.5em; bottom: 12px;">v1.3</a>
+                <br>
+                <span>This project is developed by</span>
+                <a href="https://terriblecoding.github.io" target="_blank">
+                    <img src="assets/ico/TClogo-inline.svg" class="logo">
+                </a>
+                <span class="copyright">and hosted on</span>
+                <a href="https://github.com" target="_blank" style="position: relative; bottom: 4px;">
+                    <img src="assets/ico/GitHub_logo_2013-light.svg" class="logo">
+                </a>
+                
+                <h4>Need help?</h4>
+                <a href="https://github.com/TerribleCoding/AnySection" target="_blank">
+                    <button><i class="fi-rr-book"></i>See documentation</button>
+                </a>
+                <a href="mailto:nazzaningo@gmail.com">
+                    <button><i class="fi-rr-envelope"></i>Send me an email</button>
+                </a>
+                
+                <h4>Found a bug?</h4>
+                <a href="https://github.com/TerribleCoding/AnySection/issues" target="_blank">
+                    <button><i class="fi-rr-bug"></i>Report issue on Github</button>
+                </a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScoCE_ktEacbnlTXvYtjH8emqE7fuhbBBAzJKn6cfotEIgfwA/viewform?usp=sf_link" target="_blank">
+                    <button class="secondary"><i class="fi-rr-interrogation"></i>I don't use Github</button>
+                </a>
+
+                <h4>License</h4>
+                <p style="font-size: small;">This product is intended for digital use only. It is prohibited to copy or distribute the whole or part of it, unless accorded between the parts.</p>
+                <p style="font-size: small;">&copy; Terrible Coding <span id="year"></span></p>
+                <script>
+                    document.getElementById("year").innerHTML = new Date().getFullYear();
+                </script>            
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

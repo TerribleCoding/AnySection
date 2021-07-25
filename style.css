@@ -6,7 +6,7 @@
     --color-4: #ffffff;
     --color-5: #df5327;
     --side-margin: 16px;
-    --side-bar: 0px; /*30px;*/
+    --side-bar: 10rem;
 }
 
 body {
@@ -17,25 +17,11 @@ body {
     background-color: var(--main-bg);
 }
 
-div.copyright {
-    display: block;
-    background: linear-gradient(90deg, #00000000, #00000000, var(--color-1), #00000000, #00000000);
-    height: 12px;
-    padding: 3px;
-    padding-bottom: 12px;
-    text-align: center;
-}
-
-p.copyright {
-    display: inline;
-    font-family: serif;
-    color: #ffffff;
-    font-size: 75%;
-}
-
 .logo {
-    height: 100%;
-    margin: 0 4px 0 4px;
+    height: 1em;
+    margin: 0 4px;
+    position: relative;
+    top: 4px;
 }
 
 h1 {
@@ -62,6 +48,13 @@ h3 {
 
 h3.back {
     display: inline-block;
+}
+
+h4 {
+    margin-block-end: 0.25em;
+    margin-block-start: 0.66em;
+    font-size: 1.2rem;
+    color: var(--color-1);
 }
 
 p {
@@ -92,11 +85,15 @@ a.thumbnail {
     width: 140px;
 }
 
+#main {
+    display: flex;
+}
+
 .container {
     display: inline-block;
-    padding: 0 48px 0 48px; /*16px for side bar*/
+    padding: 0 16px;
     margin: 0 auto 0 auto;
-    text-align: center;
+    /*text-align: center;*/
     width: calc(100% - 2 * var(--side-margin) - var(--side-bar) - 4 * 16px);
 }
 
@@ -104,8 +101,41 @@ a.thumbnail {
     float: right;
     margin-top: 24px;
     padding: 16px;
-    text-align: right;
     width: var(--side-bar);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 0;
+}
+
+.menu > a {
+    color: var(--color-1);
+    border: solid 3px var(--color-1);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    transition: 0.2s ease-out;
+    overflow: hidden;
+    margin-bottom: 2em;
+}
+
+.menu > a:hover {
+    width: 100%;
+    background-color: var(--color-1);
+    color: var(--color-4);
+}
+
+.menu span {
+    padding-right: 2ch;
+}
+
+.menu i {
+    font-size: 150%;
+    margin-top: 0.15em;
 }
 
 img.ico {
@@ -224,26 +254,4 @@ input, select {
     border: none;
     font-family: Rockwell;
     font-size: 14px;
-}
-
-h4 {
-    text-align: center;
-    color: var(--color-2);
-}
-
-.math {
-    /*display: inline-block;*/
-    /*margin: var(--side-margin);*/
-    /*background-color: var(--color-4);*/
-    float: left;
-    width: 256px;
-    height: 270px;
-    margin-bottom: 30px;
-    color: var(--color-4);
-}
-
-.list {
-    text-align: left;
-    color: var(--color-4);
-    margin-left: 16px;
 }

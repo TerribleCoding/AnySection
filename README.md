@@ -6,7 +6,7 @@ Can be used by designers and engineers as a quick estimation tool, as well as by
 
 ## License
 
-The project is published intentionally with no license at the moment.
+This product is intended for digital use only. It is prohibited to copy or distribute the whole or part of it, unless accorded between the parts.
 
 ## Usage
 
@@ -32,6 +32,9 @@ All texts and numbers on the pages are able to be copied and pasted anywhere you
 
 A button for getting back to the main page is provided on every profile page, directly below its title.
 
+The equations page is intuitive to use: clicking the shape from the list on the left makes the math for that shape visible.
+Some other extra features from MathJax library are also available when right-clicking on a equation, like the ability of zooming the expression or copying the LaTex string for further use.
+
 ## Known bugs and issues
 
 #### Ellipse perimeter not exact
@@ -41,10 +44,14 @@ Notice that the more "squished" the ellipse, the more imprecise the result.
 The formula has been updated to a better one - this one - in version 1.2 and the approximation is totally suitable for the intended use of this tool.
 This might mean that it won't be upgraded to an even more precise calculation (infinite series are not infinite in programming).
 
+#### Truncated material names
+
+When a material is selected from the dropdown menu, often the name overflows the space available.
+The issue will be solved in a future release.
+
 ## Next improvements to be added
 
 Note: _The order of this list might not match the order these features will be added through next versions._
-- Math page (showing formulas and symbols used in the tool)
 - More materials in the database
 - Materials divided in groups, in order to filter the available ones
 - Result finder (let the program change an input to return a specific result)
@@ -54,6 +61,16 @@ Note: _The order of this list might not match the order these features will be a
 - Dinamically change data units to type/see inputs/results in a different scale
 
 ## Versions log
+
+#### v1.3
+
+_Release date: July 25, 2021_
+
+_Work Time: 11h 30min_
+
+- Footer has been changed in a sidebar on the right
+- Added equations page showing formulas and symbols used in the tool
+- Bugs can be reported via Github or Google modules, from the "Credits" popup
 
 #### v1.2
 
@@ -89,7 +106,9 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 
 #### Libraries
 - [p5.js](https://p5js.org/) javascript library
-<!-- - [MathJax](https://www.mathjax.org/) javascript library -->
+- [MathJax](https://www.mathjax.org/) javascript library
 
 #### Media
-- Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](www.flaticon.com)
+- Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](https://www.flaticon.com/)
+- Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
+- Web font icons from [UIcons](https://www.flaticon.com/uicons) on [www.flaticon.com](https://www.flaticon.com/)

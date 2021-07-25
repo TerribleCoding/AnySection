@@ -27,3 +27,11 @@ function setup() {
         p.addClass('label');
     }
 }
+
+function openCredits() {
+    document.getElementById('credits').style.display = 'grid';
+}
+
+function closeCredits() {
+    document.getElementById('credits').style.display = 'none';
+}

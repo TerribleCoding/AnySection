@@ -1,0 +1,166 @@
+.main-container {
+    display: flex;
+    position: relative;
+}
+
+#list {
+    padding: 0.5em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#list div {
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    color: var(--color-2);
+    padding: 0.5em 1em;
+    margin: 0.3em;
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+}
+
+label:hover {
+    color: var(--color-4);
+}
+
+input[name=select]:checked ~ label {
+    background-color: var(--color-5);
+    color: var(--main-bg);
+    border-radius: 0.5em;
+}
+
+input[name=select]:checked ~ label::before, input[name=select]:checked ~ label::after {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    background: white;
+    right: -2em;
+    z-index: -1;
+}
+
+input[name=select]:checked ~ label::before {
+    transform: skewX(45deg);
+    top: 50%;
+}
+
+input[name=select]:checked ~ label::after {
+    transform: skewX(-45deg);
+    bottom: 50%;
+}
+
+label a {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+}
+
+input[name=select] {
+    display: none;
+}
+
+#board {
+    flex-grow: 1;
+    background-color: white;
+    border-radius: 1em;
+    width: 100px;
+    overflow: hidden;
+    max-height: calc(100vh - 129px - 1em);
+}
+
+.math {
+    --marg: 2%;
+    width: calc(100% - 2 * var(--marg));
+    height: calc(100% - 2 * var(--marg));
+    margin: var(--marg);
+}
+
+.math h4 {
+    color: var(--color-1);
+    text-align: center;
+}
+
+.math > div {
+    display: grid;
+    grid-template: auto 1fr / repeat(3, 1fr);
+    gap: .5em;
+}
+
+.math img {
+    margin: auto;
+    height: 12rem;
+}
+
+.card {
+    border-top: solid 1px var(--color-1);
+    border-left: solid 1px var(--color-1);
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+}
+
+.card:not(:first-of-type) > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+h5 {
+    color: black;
+    text-align: center;
+    font-size: 1em;
+    margin-block-start: 0;
+    margin-block-end: 1em;
+}
+
+.card p {
+    display: inline-block;
+    text-align: center;
+    color: black;
+    width: auto;
+    margin: .15em;
+    font-size: 80%;
+}
+
+.card:first-of-type p {
+    text-align: left;
+}
+
+.card p > span {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.card p > span:nth-child(1) {
+    display: none;
+}
+
+.card p > span:nth-child(2) {
+    width: 6ch;
+}
+
+.card p > span:nth-child(3) {
+    width: max-content;
+}
+
+.card:nth-child(2) { /*LEGEND*/
+    grid-row: 2;
+}
+
+.card:nth-child(3) { /*GEO*/
+    grid-row: 1 / span 2;
+}
+
+.card:nth-child(4) { /*PHI*/
+    grid-row: 1 / span 2;
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+    margin: .5em 0 !important;
+}

@@ -1,0 +1,393 @@
+{
+    "Cylinder": {
+        "title": "Cylinder",
+        "legend": [
+            "D : diameter",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = D /cdot /pi/]",
+            "/[A = /pi r^{2}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{/pi /cdot D^{4}}{64}/]",
+            "/[W = /frac{/pi /cdot D^{3}}{32}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Hollow Cylinder": {
+        "title": "Hollow Cylinder",
+        "legend": [
+            "D : diameter",
+            "d : internal diameter",
+            "t : thickness",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[d = D - 2t/]",
+            "/[P = D /cdot /pi + d /cdot /pi = /pi (D + d)/]",
+            "/[A = /pi r^{2} - /pi (r - t)^{2} = /pi t (D - t)/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{/pi /cdot (D^{4} - d^{4})}{64}/]",
+            "/[W = /frac{/pi /cdot (D^{3} - d^{3})}{32}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Rectangle Bar": {
+        "title": "Rectangle Bar",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "R : corner radius",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = 2 (B + H - 4R) + 2 /pi R/]",
+            "/[A = B (H - 2R) + 2R (H - 2R) + /pi R^{2}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I /approx /frac{B H^{3}}{12}/]",
+            "/[W /approx /frac{B H^{2}}{6}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Rectangular Tube": {
+        "title": "Rectangle Tube",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "R : outer radius",
+            "r : inner radius",
+            "t : thickness",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[r = max /left /{ 0 ; R - t /right /} /]",
+            "/[P_{inner} = 2 (B + H - 4t - 4r) + 2 /pi r/]",
+            "/[A_{inner} = (B - 2t)(H - 2t - 2r) + 2r (B - 2t - 2r) - /pi r^{2}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I /approx /frac{B H^{3} - (B - 2t)(H - 2t)^{3}}{12}/]",
+            "/[W /approx /frac{B H^{3} - (B - 2t)(H - 2t)^{3}}{6 H}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Triangle Prism": {
+        "title": "Triangular Prism",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = B + 2 /sqrt{/frac{B^2}{4} + H^2}/]",
+            "/[A = /frac{B H}{2}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{B H^3}{36}/]",
+            "/[W = /frac{B H^2}{24}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Trapezius Prism": {
+        "title": "Trapezius Prism",
+        "legend": [
+            "B : major base length",
+            "b : minor base length",
+            "H : height",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = B + b + 2 /sqrt{/frac{(B - b)^{2}}{4} + H^2}/]",
+            "/[A = /frac{H (B + b)}{2}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{H^3 (b^3 + 4Bb + B^2)}{36 (B + b)}/]",
+            "/[W = /frac{H^2 (b^2 + 4Bb + B^2)}{12 (B + 2b)}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Hexagon Prism": {
+        "title": "Hexagonal Prism",
+        "legend": [
+            "H : height (side to side)",
+            "e : edge length",
+            "s : circumscribed diameter",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[e = /frac{H}{2 sin/frac{/pi}{3}}/]",
+            "/[s = 2e/]",
+            "/[P = 6e/]",
+            "/[A = /frac{P /cdot H}{4}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{5 /sqrt{3}}{16} /cdot e^4/]",
+            "/[W_{A} = /frac{2 I}{H}/]",
+            "/[W_{B} = /frac{2 I}{s}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Octagonal Prism": {
+        "title": "Octagonal Prism",
+        "legend": [
+            "H : side to side dimension",
+            "e : edge length",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[e = H /sqrt{2} - H = /frac{H}{1 + /sqrt{2}}/]",
+            "/[P = 8e/]",
+            "/[A = 2 (/sqrt{2} - 1) /cdot H^2/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{/sqrt{2} - 1}{6} /cdot H^4/]",
+            "/[W = /frac{2 I}{H} = /frac{/sqrt{2} - 1}{3} /cdot H^3/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Elliptic Bar": {
+        "title": "Elliptic Bar",
+        "legend": [
+            "A : horizontal diameter",
+            "B : vertical diameter",
+            "a : horizontal radius",
+            "b : vertical radius",
+            "h : circularity factor",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[a = /frac{A}{2} /; , /; b = /frac{B}{2}/]",
+            "/[h = /frac{(a - b)^2}{(a + b)^2}/]",
+            "/[P /approx /pi (a + b) /left(1 + /frac{3h}{10 + /sqrt{4 - 3h}} /right)/]",
+            "/[A = /pi /frac{A /cdot B}{4}/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I = /frac{/pi A B^3}{64}/]",
+            "/[W = /frac{2 I}{B} = /frac{/pi A B^2}{32}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "Hollow Ellipse Bar": {
+        "title": "Elliptic Tube",
+        "legend": [
+            "A : horizontal diameter",
+            "B : vertical diameter",
+            "a : horizontal external radius",
+            "b : vertical external radius",
+            "t : thickness",
+            "h : circularity factor",
+            "h<sub>i</sub> : internal circularity factor",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[a = /frac{A}{2} /; , /; b = /frac{B}{2}/]",
+            "/[h = /frac{(a - b)^2}{(a + b)^2} /; , /; h_i = /frac{(a - b)^2}{(a + b)^2}/]",
+            "/[P /approx /pi /left[ (a + b) /left(1 + /frac{3h}{10 + /sqrt{4 - 3h}} /right) + (a + b - 2t) /left(1 + /frac{3h_i}{10 + /sqrt{4 - 3h_i}} /right) /right]/]",
+            "/[A /simeq /frac{/pi}{4} /left [A B - (A - 2t)(B- 2t) /right ]/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I /simeq /frac{/pi}{64} /left [A B^3 - (A - 2t)(B- 2t)^3 /right ]/]",
+            "/[W = /frac{2 I}{B} /simeq /frac{/pi}{32 /cdot B} /left [A B^3 - (A - 2t)(B- 2t)^3 /right ]/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "H Profile": {
+        "title": "H Profile",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "t : central thickness",
+            "h : wings inner height",
+            "L : length",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = 2 (2B + H - t)/]",
+            "/[A = B (H - h) + ht/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I_{A} = /frac{B H^3 - (B-t) h^3}{12}/]",
+            "/[W_{A} = /frac{2 I_{A}}{H} = /frac{B H^3 - (B-t) h^3}{6H}/]",
+            "/[I_{B} = /frac{(H - h) B^3 - h t^3}{12}/]",
+            "/[W_{B} = /frac{2 I_{B}}{B} = /frac{(H - h) B^3 - h t^3}{6B}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "C / U Profile": {
+        "title": "C Profile",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "b : inner base",
+            "h : wings inner height",
+            "L : length",
+            "v<sub>1</sub> : barycenter height",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = 2 (B + H + b)/]",
+            "/[A = B H - b h/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[I_{A} = /frac{B H^3 - b h^3}{12}/]",
+            "/[W_{A} = /frac{2 I_{A}}{H} = /frac{B H^3 - b h^3}{6H}/]",
+            "/[v_1B = /frac{1}{2} /cdot /frac{(H - h) B^2 + h (B - b)^2}{(H - h) B + h (B - b)}/]",
+            "/[I_{B} = /frac{H {v_1B}^3 - h (v_1B - B + b)^3 + (H - h)(B - v_1B)^3}{3}/]",
+            "/[W_{B} = /frac{I_{B}}{B - v_1B}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    },
+    "T Profile": {
+        "title": "T Profile",
+        "legend": [
+            "B : base length",
+            "H : height",
+            "t : central thickness",
+            "h : central height",
+            "L : length",
+            "v<sub>1</sub> : barycenter height",
+            "R<sub>m</sub> : braking/ultimate strength",
+            "R<sub>eH</sub> : yeld strength",
+            "I : moment of inertia on horiz. axis",
+            "W : strength modulus on vertical load",
+            "F<sub>max</sub> : max traction load"
+        ],
+        "geo": [
+            "/[P = 2 (B + H)/]",
+            "/[A = B (H - h) - h t/]",
+            "/[V = A /cdot L/]",
+            "/[if (L = 0) /Rightarrow S = A/]",
+            "/[if (L /neq 0) /Rightarrow S = 2A + P /cdot L/]"
+        ],
+        "phi": [
+            "/[m = V /cdot /rho/]",
+            "/[v_1A = /frac{1}{2} /cdot /frac{t H^2 + (B - t) (H - h)^2}{t H + (B - t) (H - h)}/]",
+            "/[I_{A} = /frac{B {v_1A}^3 - (B - t) (v_1A - H + h)^3 + t(H - v_1A)^3}{3}/]",
+            "/[W_{A} = /frac{I_{A}}{H - v_1A}/]",
+            "/[I_{B} = /frac{(H - h) B^3 - h t^3}{12}/]",
+            "/[W_{B} = /frac{2 I_{B}}{B} = /frac{(H - h) B^3 - h t^3}{6B}/]",
+            "/[if (R_{s} /neq 0) /Rightarrow F_{max} = /frac{R_{s}}{3} /cdot A/]",
+            "/[else /Rightarrow F_{max} = /frac{R_{m}}{4} /cdot A/]"
+        ]
+    }
+}
