@@ -17,25 +17,11 @@ body {
     background-color: var(--main-bg);
 }
 
-div.copyright {
-    display: block;
-    background: linear-gradient(90deg, #00000000, #00000000, var(--color-1), #00000000, #00000000);
-    height: 12px;
-    padding: 3px;
-    padding-bottom: 12px;
-    text-align: center;
-}
-
-p.copyright {
-    display: inline;
-    font-family: serif;
-    color: #ffffff;
-    font-size: 75%;
-}
-
 .logo {
-    height: 100%;
-    margin: 0 4px 0 4px;
+    height: 1em;
+    margin: 0 4px;
+    position: relative;
+    top: 4px;
 }
 
 h1 {
@@ -62,6 +48,13 @@ h3 {
 
 h3.back {
     display: inline-block;
+}
+
+h4 {
+    margin-block-end: 0.25em;
+    margin-block-start: 0.66em;
+    font-size: 1.2rem;
+    color: var(--color-1);
 }
 
 p {

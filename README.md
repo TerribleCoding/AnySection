@@ -6,7 +6,7 @@ Can be used by designers and engineers as a quick estimation tool, as well as by
 
 ## License
 
-The project is published intentionally with no license at the moment.
+This product is intended for digital use only. It is prohibited to copy or distribute the whole or part of it, unless accorded between the parts.
 
 ## Usage
 
@@ -44,7 +44,6 @@ This might mean that it won't be upgraded to an even more precise calculation (i
 ## Next improvements to be added
 
 Note: _The order of this list might not match the order these features will be added through next versions._
-- Math page (showing formulas and symbols used in the tool)
 - More materials in the database
 - Materials divided in groups, in order to filter the available ones
 - Result finder (let the program change an input to return a specific result)
@@ -57,9 +56,13 @@ Note: _The order of this list might not match the order these features will be a
 
 #### v1.3
 
-_Release date: ???????????????????????_
+_Release date: July 25, 2021_
 
-_Work Time: 10h_
+_Work Time: 11h 30min_
+
+- Added equations page, showing formulas and symbols used in the tool
+- Changed the footer in a sidebar
+- Bugs can be reported via Github or Google module, from the "Credits" popup
 
 #### v1.2
 
