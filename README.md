@@ -32,6 +32,9 @@ All texts and numbers on the pages are able to be copied and pasted anywhere you
 
 A button for getting back to the main page is provided on every profile page, directly below its title.
 
+The equations page is intuitive to use: clicking the shape from the list on the left makes the math for that shape visible.
+Some other extra features from MathJax library are also available when right-clicking on a equation, like the ability of zooming the expression or copying the LaTex string for further use.
+
 ## Known bugs and issues
 
 #### Ellipse perimeter not exact
@@ -40,6 +43,11 @@ The formula used to get the perimeter is not an exact calculation, however is ro
 Notice that the more "squished" the ellipse, the more imprecise the result.
 The formula has been updated to a better one - this one - in version 1.2 and the approximation is totally suitable for the intended use of this tool.
 This might mean that it won't be upgraded to an even more precise calculation (infinite series are not infinite in programming).
+
+#### Truncated material names
+
+When a material is selected from the dropdown menu, often the name overflows the space available.
+The issue will be solved in a future release.
 
 ## Next improvements to be added
 
@@ -60,9 +68,9 @@ _Release date: July 25, 2021_
 
 _Work Time: 11h 30min_
 
-- Added equations page, showing formulas and symbols used in the tool
-- Changed the footer in a sidebar
-- Bugs can be reported via Github or Google module, from the "Credits" popup
+- Footer has been changed in a sidebar on the right
+- Added equations page showing formulas and symbols used in the tool
+- Bugs can be reported via Github or Google modules, from the "Credits" popup
 
 #### v1.2
 
@@ -98,8 +106,9 @@ First release composed by an index page and 13 standard shapes to choose. Tables
 
 #### Libraries
 - [p5.js](https://p5js.org/) javascript library
-<!-- - [MathJax](https://www.mathjax.org/) javascript library -->
+- [MathJax](https://www.mathjax.org/) javascript library
 
 #### Media
 - Favicon made by [Vitaliy Gorbachev](https://www.flaticon.com/authors/vitaly-gorbachev) from [www.flaticon.com](https://www.flaticon.com/)
-- Icons made by [Freepik](https://www.freepik.com) [www.flaticon.com](https://www.flaticon.com/)
+- Icons made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
+- Web font icons from [UIcons](https://www.flaticon.com/uicons) on [www.flaticon.com](https://www.flaticon.com/)
