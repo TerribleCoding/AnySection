@@ -178,3 +178,32 @@ function Traction() {
     }
     return R / k * a;
 }
+
+
+
+// EXPRESSION EDITOR FUNCTIONS
+
+var editor = document.querySelector('#calc');
+var property = document.querySelector('#var');
+var textfield = document.querySelector('#expression');
+var result = document.querySelector('#result num');
+var icons = document.querySelectorAll('#result icon > *');
+
+function openEditor() {
+    editor.style.display = 'grid';
+}
+
+function closeEditor() {
+    editor.style.display = 'none';
+}
+
+function keyPressed() {
+    // press '=' to open editor when closed and focus on textfield
+    if (keyCode === 48 && editor.style.display == 'none') { 
+        openEditor();
+        textfield.focus();
+        textfield.value = '';
+    }
+    // press 'Esc' to close editor when open
+    if (keyCode === 27 && editor.style.display !== 'none') closeEditor();
+}
