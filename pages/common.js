@@ -84,6 +84,9 @@ function setup() {
 
     // set values when selecting a material
     selector.changed(updateMatProp);
+
+    // add event listeners to open equation editor
+    addEquationKeyListeners();
 }
 
 function updateMatProp() {
@@ -184,7 +187,7 @@ function Traction() {
 // EXPRESSION EDITOR FUNCTIONS
 
 var editor = document.querySelector('#calc');
-var property = document.querySelector('#var');
+var variable = document.querySelector('#var');
 var textfield = document.querySelector('#expression');
 var result = document.querySelector('#result num');
 var icons = document.querySelectorAll('#result icon > *');
@@ -197,13 +200,23 @@ function closeEditor() {
     editor.style.display = 'none';
 }
 
-function keyPressed() {
-    // press '=' to open editor when closed and focus on textfield
-    if (keyCode === 48 && editor.style.display == 'none') { 
-        openEditor();
-        textfield.focus();
-        textfield.value = '';
-    }
-    // press 'Esc' to close editor when open
-    if (keyCode === 27 && editor.style.display !== 'none') closeEditor();
+function addEquationKeyListeners() {
+    var target = document.querySelectorAll('table input[type=number]');
+    console.log(target);
+    target.forEach(item => item.addEventListener('keyup', openEditorForVariable));
 }
+
+function openEditorForVariable(event) {
+    // press '=' to open editor when closed and focus on textfield
+    if (event.key == '=' && editor.style.display == 'none') {
+        variable.value = event.target.parentNode.previousElementSibling.innerHTML;
+        textfield.value = '';
+        textfield.focus();
+        openEditor();
+    }
+}
+
+// function keyPressed() {
+//     // press 'Esc' to close editor when open
+//     if (keyCode === 27 && editor.style.display !== 'none') closeEditor();
+// }
