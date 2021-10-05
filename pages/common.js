@@ -5,7 +5,7 @@ var combo, selector;
 var imageSpace;
 var pageName;
 
-// dimensions = list of all dimensions called in all pages, update while coding pages
+// dimensions = list of all dimensions called in all pages
 var dimensions = ['L', 'D', 't', 'B', 'b', 'H', 'R', 'A', 'h'];
 var dim = {};
 var matProp = ['density', 'brake', 'yeld'];
@@ -187,10 +187,11 @@ function Traction() {
 // EXPRESSION EDITOR FUNCTIONS
 
 var editor = document.querySelector('#calc');
-var variable = document.querySelector('#var');
+var property = document.querySelector('#var');
 var textfield = document.querySelector('#expression');
 var result = document.querySelector('#result num');
 var icons = document.querySelectorAll('#result icon > *');
+var button = document.querySelector('#calc button');
 
 function openEditor() {
     editor.style.display = 'grid';
@@ -202,21 +203,25 @@ function closeEditor() {
 
 function addEquationKeyListeners() {
     var target = document.querySelectorAll('table input[type=number]');
-    console.log(target);
     target.forEach(item => item.addEventListener('keyup', openEditorForVariable));
 }
 
 function openEditorForVariable(event) {
     // press '=' to open editor when closed and focus on textfield
     if (event.key == '=' && editor.style.display == 'none') {
-        variable.value = event.target.parentNode.previousElementSibling.innerHTML;
+        property.innerHTML = event.target.parentNode.previousElementSibling.innerHTML;
         textfield.value = '';
         textfield.focus();
         openEditor();
     }
 }
 
-// function keyPressed() {
-//     // press 'Esc' to close editor when open
-//     if (keyCode === 27 && editor.style.display !== 'none') closeEditor();
-// }
+editor.addEventListener('keyup', function (event) {
+    // do something only if the editor is open
+    if (editor.style.display !== 'none') {
+        // press 'Esc' to close editor
+        if (event.key == 'Escape') closeEditor();
+        // press 'Enter' to act as pressing the button
+        if (event.key == 'Enter') button.click();
+    }
+});
