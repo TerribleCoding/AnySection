@@ -225,3 +225,32 @@ editor.addEventListener('keyup', function (event) {
         if (event.key == 'Enter') button.click();
     }
 });
+
+// check for errors while typing
+textfield.addEventListener('input', checkErrors);
+
+function checkErrors(event) {
+    var inp = event.target.value.toString();
+
+    // check allowed characters => 0123456789.+-*/()
+    var test = inp.match(/[0-9|\+|\-|\*|\/|(|)|\.]+/);
+    if (!test) test = [""];
+
+    // if length of input = characters matched expression is valid
+    if (inp.length === test[0].length) {
+        button.disabled = false;
+        showIcon(0);
+    } else {
+        button.disabled = true;
+        showIcon(1);
+    }
+
+    function showIcon(index) {
+        icons.forEach(e => e.classList.add('invisible'));
+        icons[index].classList.remove('invisible');
+    }
+
+    // check if parentheses match
+    
+}
+

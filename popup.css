@@ -80,6 +80,15 @@ close:hover {
     border-color: var(--color-1);
 }
 
+.popup button:disabled, 
+.popup button:disabled:hover {
+    border-color: var(--color-2);
+    color: var(--color-2);
+    background-color: transparent;
+    opacity: 50%;
+    cursor: default;
+}
+
 .popup button i {
     margin-right: 1ch;
 }
