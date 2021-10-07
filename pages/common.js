@@ -192,6 +192,11 @@ var textfield = document.querySelector('#expression');
 var result = document.querySelector('#result num');
 var icons = document.querySelectorAll('#result icon > *');
 var button = document.querySelector('#calc button');
+var errors = {
+    char: 'Only numbers or +-*/(). characters are allowed.',
+    par: 'Some parentheses are missing.'
+}
+
 
 function openEditor() {
     editor.style.display = 'grid';
@@ -230,14 +235,14 @@ editor.addEventListener('keyup', function (event) {
 textfield.addEventListener('input', checkErrors);
 
 function checkErrors(event) {
-    var inp = event.target.value.toString();
-
-    // check allowed characters => 0123456789.+-*/()
-    var test = inp.match(/[0-9|\+|\-|\*|\/|(|)|\.]+/);
-    if (!test) test = [""];
-
-    // if length of input = characters matched expression is valid
-    if (inp.length === test[0].length) {
+    var inp = event.target.value.toString().split('');
+    // check if every character is allowed => 0123456789.+-*/()
+    var charTest = inp.every(char => char.match(/[0-9|\+|\-|\*|\/|(|)|\.]/));
+    // check if parentheses match
+    var parTest = inp.filter(char => char == '(').length == inp.filter(char => char == ')').length;
+    
+    // update icon and button
+    if (charTest && parTest) {
         button.disabled = false;
         showIcon(0);
     } else {
@@ -250,7 +255,11 @@ function checkErrors(event) {
         icons[index].classList.remove('invisible');
     }
 
-    // check if parentheses match
-    
+    // update warning tooltip
+    var tooltip = [];
+    if (!charTest) tooltip.push(errors.char);
+    if (!parTest) tooltip.push(errors.par);
+    console.log(tooltip)
+    icons[1].querySelector('span').innerText = tooltip.join('\n');
 }
 
