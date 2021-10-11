@@ -194,7 +194,8 @@ var icons = document.querySelectorAll('#result icon > *');
 var button = document.querySelector('#calc button');
 var errors = {
     char: 'Only numbers or +-*/(). characters are allowed.',
-    par: 'Some parentheses are missing.'
+    par: 'Some parentheses are missing.',
+    syntax: 'Syntax error detected.'
 }
 
 
@@ -235,14 +236,32 @@ editor.addEventListener('keyup', function (event) {
 textfield.addEventListener('input', checkErrors);
 
 function checkErrors(event) {
-    var inp = event.target.value.toString().split('');
+    // convert the input to string, split in an array, remove spaces
+    var inp = event.target.value.toString().split('').filter(x => x != " ");
     // check if every character is allowed => 0123456789.+-*/()
     var charTest = inp.every(char => char.match(/[0-9|\+|\-|\*|\/|(|)|\.]/));
     // check if parentheses match
     var parTest = inp.filter(char => char == '(').length == inp.filter(char => char == ')').length;
-    
+
+    // preview result
+    var validExpression = true;
+    try {
+        eval(inp.join(''));
+    } catch (e) {
+        if (e instanceof SyntaxError) validExpression = false;
+    } finally {
+        if (validExpression && charTest && parTest) result.innerText = eval(inp.join(''));
+    }
+
+    // update warning tooltip
+    var tooltip = [];
+    if (!charTest) tooltip.push(errors.char);
+    if (!parTest) tooltip.push(errors.par);
+    if (!validExpression) tooltip.push(errors.syntax);
+    icons[1].querySelector('span').innerText = tooltip.join('\n');
+
     // update icon and button
-    if (charTest && parTest) {
+    if (charTest && parTest && validExpression) {
         button.disabled = false;
         showIcon(0);
     } else {
@@ -254,12 +273,5 @@ function checkErrors(event) {
         icons.forEach(e => e.classList.add('invisible'));
         icons[index].classList.remove('invisible');
     }
-
-    // update warning tooltip
-    var tooltip = [];
-    if (!charTest) tooltip.push(errors.char);
-    if (!parTest) tooltip.push(errors.par);
-    console.log(tooltip)
-    icons[1].querySelector('span').innerText = tooltip.join('\n');
 }
 
