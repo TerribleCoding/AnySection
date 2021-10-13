@@ -4,9 +4,11 @@
 <head>
     <title>Double T / H Profile</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.3.0/lib/p5.js"></script>
-    <script src="common.js"></script>
+    <script src="common.js" defer></script>
     <script src="h-profile.js"></script>
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../popup.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel="icon" type="image/x-icon" href="../assets/ico/favicon.ico">
 </head>
 
@@ -145,6 +147,35 @@
     </div>
 
     <div class="right" id="image"></div>
+
+    <div id="calc" style="display: none;" class="popup auto-width shadow">
+        <div class="outer">
+            <div class="content">
+                <close onclick="closeEditor()"><i class="fi-rr-cross"></i></close>
+                <h4>Expression editor</h4>
+                <p>Enter a valid expression for the variable:</p>
+                <p class="big">
+                    <span id="var">D</span>
+                    <span>=</span>
+                    <input type="text" name="expression" id="expression" placeholder="0">
+                    <span>=</span>
+                    <span id="result">
+                        <num>0</num>
+                        <icon>
+                            <i class="fi-rr-check">
+                                <span>Expression OK</span>
+                            </i>
+                            <i class="fi-rr-exclamation invisible">
+                                <span></span>
+                            </i>
+                        </icon>
+                    </span>
+                </p>
+                <button style="display: block; margin: auto;"><i class="fi-rr-check"></i>Use result</button>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
