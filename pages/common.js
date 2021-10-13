@@ -188,6 +188,7 @@ function Traction() {
 
 var editor = document.querySelector('#calc');
 var property = document.querySelector('#var');
+var dataInput;
 var textfield = document.querySelector('#expression');
 var result = document.querySelector('#result num');
 var icons = document.querySelectorAll('#result icon > *');
@@ -197,7 +198,6 @@ var errors = {
     par: 'Some parentheses are missing.',
     syntax: 'Syntax error detected.'
 }
-
 
 function openEditor() {
     editor.style.display = 'grid';
@@ -215,9 +215,11 @@ function addEquationKeyListeners() {
 function openEditorForVariable(event) {
     // press '=' to open editor when closed and focus on textfield
     if (event.key == '=' && editor.style.display == 'none') {
+        dataInput = event.target;
         property.innerHTML = event.target.parentNode.previousElementSibling.innerHTML;
-        textfield.value = '';
+        textfield.value = dataInput.value;
         textfield.focus();
+        result.innerText = '0';
         openEditor();
     }
 }
@@ -275,3 +277,9 @@ function checkErrors(event) {
     }
 }
 
+// paste result in the field if confirmed
+button.addEventListener('click', function() {
+    dataInput.value = result.innerText;
+    closeEditor();
+    dataInput.focus();
+});
