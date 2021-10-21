@@ -64,9 +64,9 @@ Note: _The order of this list might not match the order these features will be a
 
 #### v1.4
 
-_Release date: ???????????????????????_
+_Release date: October 22, 2021_
 
-_Work Time: 7h 15min_
+_Work Time: 8h_
 
 - 
 
