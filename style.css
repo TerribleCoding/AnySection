@@ -97,10 +97,12 @@ div.new-feature {
     font-size: initial;
     box-shadow: -5px 5px 10px 0px var(--color-3);
     transition: 0.2s ease-out;
+    z-index: -1;
 }
 
 button.new-feature:hover ~ div.new-feature {
     opacity: 100%;
+    z-index: 2;
 }
 
 div.new-feature * {
