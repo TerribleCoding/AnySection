@@ -6,12 +6,19 @@
     top: 0;
     left: 0;
     background-color: hsla(0, 0%, 0%, 0.65);
-    backdrop-filter: blur(8px);
     /*display: grid;*/
     place-items: center;
 }
 
-.popup > .outer {
+.popup.blur {
+    backdrop-filter: blur(8px);
+}
+
+.popup .invisible {
+    display: none;
+}
+
+.popup>.outer {
     width: 40%;
     background-color: var(--main-bg);
     border-radius: 0.5em;
@@ -19,6 +26,16 @@
     display: grid;
     place-items: center;
     border: solid 3px var(--color-1);
+}
+
+.popup.auto-width>.outer {
+    width: auto;
+}
+
+.popup.shadow>.outer {
+    --shadow: 10px 10px 16px 0px hsla(0, 0%, 10%, 0.5);
+    -webkit-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 close {
@@ -35,7 +52,7 @@ close:hover {
     color: var(--color-4);
 }
 
-.popup > .outer > .content {
+.popup>.outer>.content {
     width: 100%;
     height: 100%;
     font-family: Arial, sans-serif;
@@ -63,6 +80,15 @@ close:hover {
     border-color: var(--color-1);
 }
 
+.popup button:disabled, 
+.popup button:disabled:hover {
+    border-color: var(--color-2);
+    color: var(--color-2);
+    background-color: transparent;
+    opacity: 50%;
+    cursor: default;
+}
+
 .popup button i {
     margin-right: 1ch;
 }
@@ -77,7 +103,76 @@ close:hover {
 }
 
 .popup p {
-    margin-block-start: 0;
-    margin-block-end: 0;
+    /*margin-block-start: 0;
+    margin-block-end: 0;*/
     line-height: 1.2em;
+}
+
+.popup p.big {
+    font-size: 133%;
+    margin: 0.5em 0;
+}
+
+.popup p.big icon {
+    font-size: 80%;
+}
+
+.popup p.big icon i {
+    position: relative;
+}
+
+.popup icon>i>span {
+    --pad: 0.5em;
+    opacity: 0%;
+    font-size: 75%;
+    background-color: var(--color-2);
+    border-radius: var(--pad);
+    color: var(--main-bg);
+    position: absolute;
+    padding: var(--pad);
+    width: max-content;
+    bottom: 200%;
+    left: 50%;
+    transform: translateY(0.5em);
+    transition: 0.2s linear;
+}
+
+.popup icon>i>span::before {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: 1em;
+    aspect-ratio: 1;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    top: 100%;
+}
+
+.popup icon>i:hover>span {
+    opacity: 100%;
+    transform: translateY(0);
+}
+
+.popup p.big icon i:nth-child(1) {
+    color: #00bb00;
+}
+
+.popup p.big icon i:nth-child(2) {
+    /*color: #dd0000;*/
+    color: #ffbb00;
+}
+
+.popup input[type=text] {
+    font-family: inherit;
+    width: 20ch;
+    height: 1.5em;
+    text-align: left;
+    position: relative;
+    top: -0.2em;
+    border-radius: 0.25em;
+}
+
+.popup #result {
+    display: inline-block;
+    min-width: 8ch;
 }

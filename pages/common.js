@@ -5,7 +5,7 @@ var combo, selector;
 var imageSpace;
 var pageName;
 
-// dimensions = list of all dimensions called in all pages, update while coding pages
+// dimensions = list of all dimensions called in all pages
 var dimensions = ['L', 'D', 't', 'B', 'b', 'H', 'R', 'A', 'h'];
 var dim = {};
 var matProp = ['density', 'brake', 'yeld'];
@@ -84,6 +84,9 @@ function setup() {
 
     // set values when selecting a material
     selector.changed(updateMatProp);
+
+    // add event listeners to open equation editor
+    addEquationKeyListeners();
 }
 
 function updateMatProp() {
@@ -178,3 +181,105 @@ function Traction() {
     }
     return R / k * a;
 }
+
+
+
+// EXPRESSION EDITOR FUNCTIONS
+
+var editor = document.querySelector('#calc');
+var property = document.querySelector('#var');
+var dataInput;
+var textfield = document.querySelector('#expression');
+var result = document.querySelector('#result num');
+var icons = document.querySelectorAll('#result icon > *');
+var button = document.querySelector('#calc button');
+var errors = {
+    char: 'Only numbers or +-*/(). characters are allowed.',
+    par: 'Some parentheses are missing.',
+    syntax: 'Syntax error detected.'
+}
+
+function openEditor() {
+    editor.style.display = 'grid';
+}
+
+function closeEditor() {
+    editor.style.display = 'none';
+}
+
+function addEquationKeyListeners() {
+    var target = document.querySelectorAll('table input[type=number]');
+    target.forEach(item => item.addEventListener('keyup', openEditorForVariable));
+}
+
+function openEditorForVariable(event) {
+    // press '=' to open editor when closed and focus on textfield
+    if (event.key == '=' && editor.style.display == 'none') {
+        dataInput = event.target;
+        property.innerHTML = event.target.parentNode.previousElementSibling.innerHTML;
+        textfield.value = dataInput.value;
+        textfield.focus();
+        result.innerText = '0';
+        openEditor();
+    }
+}
+
+editor.addEventListener('keyup', function (event) {
+    // do something only if the editor is open
+    if (editor.style.display !== 'none') {
+        // press 'Esc' to close editor
+        if (event.key == 'Escape') closeEditor();
+        // press 'Enter' to act as pressing the button
+        if (event.key == 'Enter') button.click();
+    }
+});
+
+// check for errors while typing
+textfield.addEventListener('input', checkErrors);
+
+function checkErrors(event) {
+    // convert the input to string, split in an array, remove spaces
+    var inp = event.target.value.toString().split('').filter(x => x != " ");
+    // check if every character is allowed => 0123456789.+-*/()
+    var charTest = inp.every(char => char.match(/[0-9|\+|\-|\*|\/|(|)|\.]/));
+    // check if parentheses match
+    var parTest = inp.filter(char => char == '(').length == inp.filter(char => char == ')').length;
+
+    // preview result
+    var validExpression = true;
+    try {
+        eval(inp.join(''));
+    } catch (e) {
+        if (e instanceof SyntaxError) validExpression = false;
+    } finally {
+        if (validExpression && charTest && parTest) result.innerText = eval(inp.join(''));
+    }
+
+    // update warning tooltip
+    var tooltip = [];
+    if (!charTest) tooltip.push(errors.char);
+    if (!parTest) tooltip.push(errors.par);
+    if (!validExpression) tooltip.push(errors.syntax);
+    icons[1].querySelector('span').innerText = tooltip.join('\n');
+
+    // update icon and button
+    if (charTest && parTest && validExpression) {
+        button.disabled = false;
+        showIcon(0);
+    } else {
+        button.disabled = true;
+        showIcon(1);
+    }
+
+    function showIcon(index) {
+        icons.forEach(e => e.classList.add('invisible'));
+        icons[index].classList.remove('invisible');
+    }
+}
+
+// paste result in the field if confirmed
+button.addEventListener('click', function() {
+    dataInput.value = result.innerText;
+    closeEditor();
+    dataInput.focus();
+});

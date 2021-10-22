@@ -36,7 +36,8 @@ h1 {
 .tool-logo {
     height: 50px;
     position: absolute;
-    transform: translateY(-73.1px); /*-23.1 - height*/
+    transform: translateY(-73.1px);
+    /*-23.1 - height*/
 }
 
 h3 {
@@ -59,6 +60,56 @@ h4 {
 
 p {
     font-size: 14px;
+}
+
+button.new-feature {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: solid 3px var(--color-5);
+    color: var(--color-5);
+    background-color: transparent;
+    font-weight: bold;
+    animation: zoom-in-out 1s ease-in-out infinite alternate;
+    position: absolute;
+    top: 10px;
+    right: 32px;
+}
+
+@keyframes zoom-in-out {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.1)
+    }
+}
+
+div.new-feature {
+    opacity: 0;
+    width: 40vw;
+    position: absolute;
+    top: 60px;
+    right: 32px;
+    background-color: var(--color-2);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: var(--color-3);
+    font-size: initial;
+    box-shadow: -5px 5px 10px 0px var(--color-3);
+    transition: 0.2s ease-out;
+}
+
+button.new-feature:hover ~ div.new-feature {
+    opacity: 100%;
+}
+
+div.new-feature * {
+    color: inherit;
+    font: inherit;
+}
+
+video {
+    max-width: 100%;
 }
 
 .label {
@@ -108,7 +159,7 @@ a.thumbnail {
     flex-grow: 0;
 }
 
-.menu > a {
+.menu>a {
     color: var(--color-1);
     border: solid 3px var(--color-1);
     border-radius: 0.5em;
@@ -123,7 +174,7 @@ a.thumbnail {
     margin-bottom: 2em;
 }
 
-.menu > a:hover {
+.menu>a:hover {
     width: 100%;
     background-color: var(--color-1);
     color: var(--color-4);
