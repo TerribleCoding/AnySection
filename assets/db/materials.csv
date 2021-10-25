@@ -1,5 +1,5 @@
 "ID","name","class","density","brakeTension","yieldTension"
-"0","none","","","",""
+"0","none",,,,
 "1","C10","Steel","7800","500","360"
 "2","C40","Steel","7800","690","580"
 "3","C60","Steel","7800","850","660"
@@ -9,20 +9,31 @@
 "7","17NiCr6","Steel","7800","600","295"
 "8","39CrNiMo3","Steel","7800","900","700"
 "9","42CrMo4","Steel","7800","1000","750"
-"10","AISI 304","Stainless steel","7930","515",""
-"11","AISI 316","Stainless steel","8000","580",""
-"12","AISI 410","Stainless steel","7700","730",""
-"13","AISI 420","Stainless steel","7700","800",""
-"14","AISI 430","Stainless steel","7700","500",""
-"15","AISI 630","Stainless steel","7800","1200",""
-"16","AISI 904","Stainless steel","8000","540",""
+"10","AISI 304","Stainless steel","7930","515",
+"11","AISI 316","Stainless steel","8000","580",
+"12","AISI 410","Stainless steel","7700","730",
+"13","AISI 420","Stainless steel","7700","800",
+"14","AISI 430","Stainless steel","7700","500",
+"15","AISI 630","Stainless steel","7800","1200",
+"16","AISI 904","Stainless steel","8000","540",
 "17","EN AW-1050","Aluminium","2710","100","85"
 "18","EN AW-2024","Aluminium","2780","420","280"
 "19","EN AW-5083","Aluminium","2660","270","110"
 "20","EN AW-5754","Aluminium","2650","190","80"
 "21","EN AW-6060","Aluminium","2700","170","140"
 "22","EN AW-6061","Aluminium","2700","265","230"
-"26","EN AW-6063","Aluminium","2700","175","130"
 "23","EN AW-6082","Aluminium","2700","270","200"
 "24","EN AW-7020","Aluminium","2730","340","275"
 "25","EN AW-7075","Aluminium","2810","440","400"
+"26","EN AW-6063","Aluminium","2700","175","130"
+"27","AMPCO 8","Bronze","7950","550","350"
+"28","AMPCO 18","Bronze","7450","724","365"
+"29","AMPCO 21","Bronze","7200","758","420"
+"30","AMPCO 22","Bronze","7060","724","427"
+"31","AMPCO 45","Bronze","7530","793","448"
+"32","Grade 1","Titanium","4510","240","170"
+"33","Grade 2","Titanium","4510","345","275"
+"34","Grade 4","Titanium","4510","550","485"
+"35","Grade 5","Titanium","4400","900","830"
+"36","Grade 7","Titanium","4510","375","345"
+"37","Grade 9","Titanium","4480","620","520"

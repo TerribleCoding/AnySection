@@ -2,9 +2,9 @@
     "Steel": "S235",
     "Stainless steel": "AISI 304",
     "Aluminium": "EN AW-6060",
-    "Bronze": "",
+    "Bronze": "AMPCO 18",
     "Copper": "",
     "Brass": "",
-    "Titanium": "",
+    "Titanium": "Grade 5",
     "Magnesium": ""
 }
