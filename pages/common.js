@@ -14,7 +14,7 @@ var res = {};
 
 function preload() {
     profiles = loadTable("../assets/db/profiles.csv", "csv", "header");
-    materials = loadTable("../assets/db/materials.csv", "csv", "header");
+    materials = loadTable("../assets/db/materials-temp.csv", "csv", "header");
 
     pageName = location.pathname.split("/").slice(-1)[0].split(".")[0];
     combo = document.getElementById('combo');
