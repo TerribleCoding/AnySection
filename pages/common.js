@@ -17,7 +17,7 @@ function preload() {
     materials = loadTable("../assets/db/materials-temp.csv", "csv", "header");
 
     pageName = location.pathname.split("/").slice(-1)[0].split(".")[0];
-    combo = document.getElementById('combo');
+    combo = document.getElementById('mat-select');
     selector = createSelect();
     selector.parent(combo);
     imageSpace = document.getElementById('image');

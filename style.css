@@ -256,6 +256,7 @@ img.back {
 table {
     float: left;
     border-spacing: 0px;
+    margin-right: 20px;
 }
 
 caption {
@@ -296,7 +297,7 @@ td.value.results {
 }
 
 td.unit {
-    width: 80px;
+    width: 60px;
     padding-left: 5px;
 }
 
@@ -307,4 +308,9 @@ input, select {
     border: none;
     font-family: Rockwell;
     font-size: 14px;
+}
+
+.combo > select {
+    width: 160px;
+    text-align: left;
 }
