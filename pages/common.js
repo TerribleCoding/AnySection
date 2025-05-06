@@ -1,3 +1,5 @@
+window.location = "https://any-section.web.app/";
+
 var profiles;
 var materials;
 
